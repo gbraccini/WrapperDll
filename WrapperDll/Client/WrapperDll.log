@@ -1,0 +1,44 @@
+﻿Compilazione avviata 29/12/14 09:22:12.
+     1>Progetto "Z:\condivisa_virtuali\MilleWrapperDll\WrapperDll\WrapperDll.vcxproj" sul nodo 2 (destinazioni: build).
+     1>InitializeBuildStatus:
+         Creazione di "Client\WrapperDll.unsuccessfulbuild". È stato specificato "AlwaysCreate".
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D GOOGLE_GLOG_DLL_DECL= /D GFLAGS_DLL_DECL= /D GFLAGS_DLL_DEFINE_FLAG= /D GFLAGS_DLL_DECLARE_FLAG= /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Client\\" /Fd"Client\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ClientWrapDll.cpp Connection.cpp EseguiDLL.cpp parametri.pb.cc stdafx.cpp tools.cpp WrapperDll.cpp wrapper_server.cpp
+         wrapper_server.cpp
+     1>z:\condivisa_virtuali\millewrapperdll\wrapperdll\wrapper_server.h(4): fatal error C1083: Impossibile aprire il file inclusione 'boost/asio.hpp': No such file or directory
+         WrapperDll.cpp
+     1>z:\condivisa_virtuali\millewrapperdll\wrapperdll\wrapperdll.cpp(24): fatal error C1083: Impossibile aprire il file inclusione 'boost/asio.hpp': No such file or directory
+         tools.cpp
+     1>c:\program files (x86)\microsoft visual studio 10.0\vc\include\cstdio(48): warning C4995: 'gets': nome contrassegnato come #pragma deprecated
+     1>c:\program files (x86)\microsoft visual studio 10.0\vc\include\cstdio(52): warning C4995: 'sprintf': nome contrassegnato come #pragma deprecated
+     1>c:\program files (x86)\microsoft visual studio 10.0\vc\include\cstdio(55): warning C4995: 'vsprintf': nome contrassegnato come #pragma deprecated
+     1>c:\program files (x86)\microsoft visual studio 10.0\vc\include\cstring(21): warning C4995: 'strcat': nome contrassegnato come #pragma deprecated
+     1>c:\program files (x86)\microsoft visual studio 10.0\vc\include\cstring(22): warning C4995: 'strcpy': nome contrassegnato come #pragma deprecated
+     1>c:\program files (x86)\microsoft visual studio 10.0\vc\include\cwchar(30): warning C4995: 'swprintf': nome contrassegnato come #pragma deprecated
+     1>c:\program files (x86)\microsoft visual studio 10.0\vc\include\cwchar(31): warning C4995: 'vswprintf': nome contrassegnato come #pragma deprecated
+     1>c:\program files (x86)\microsoft visual studio 10.0\vc\include\cwchar(33): warning C4995: 'wcscat': nome contrassegnato come #pragma deprecated
+     1>c:\program files (x86)\microsoft visual studio 10.0\vc\include\cwchar(35): warning C4995: 'wcscpy': nome contrassegnato come #pragma deprecated
+     1>c:\program files (x86)\microsoft visual studio 10.0\vc\include\string(757): warning C4995: 'swprintf': nome contrassegnato come #pragma deprecated
+     1>c:\program files (x86)\microsoft visual studio 10.0\vc\include\string(766): warning C4995: 'swprintf': nome contrassegnato come #pragma deprecated
+     1>c:\program files (x86)\microsoft visual studio 10.0\vc\include\string(775): warning C4995: 'swprintf': nome contrassegnato come #pragma deprecated
+     1>z:\condivisa_virtuali\millewrapperdll\wrapperdll\tools.cpp(23): warning C4995: 'strcpy': nome contrassegnato come #pragma deprecated
+     1>z:\condivisa_virtuali\millewrapperdll\wrapperdll\tools.cpp(23): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105): vedere la dichiarazione di 'strcpy'
+     1>z:\condivisa_virtuali\millewrapperdll\wrapperdll\tools.cpp(24): warning C4995: 'strcat': nome contrassegnato come #pragma deprecated
+     1>z:\condivisa_virtuali\millewrapperdll\wrapperdll\tools.cpp(24): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(110): vedere la dichiarazione di 'strcat'
+         stdafx.cpp
+         parametri.pb.cc
+     1>z:\condivisa_virtuali\millewrapperdll\wrapperdll\parametri.pb.h(9): fatal error C1083: Impossibile aprire il file inclusione 'google/protobuf/stubs/common.h': No such file or directory
+         EseguiDLL.cpp
+     1>z:\condivisa_virtuali\millewrapperdll\wrapperdll\eseguidll.cpp(4): fatal error C1083: Impossibile aprire il file inclusione 'glog/logging.h': No such file or directory
+         Connection.cpp
+     1>z:\condivisa_virtuali\millewrapperdll\wrapperdll\connection.h(14): fatal error C1083: Impossibile aprire il file inclusione 'boost/asio.hpp': No such file or directory
+         ClientWrapDll.cpp
+     1>z:\condivisa_virtuali\millewrapperdll\wrapperdll\clientwrapdll.cpp(8): fatal error C1083: Impossibile aprire il file inclusione 'boost/asio.hpp': No such file or directory
+         Generazione del codice in corso...
+     1>Compilazione progetto "Z:\condivisa_virtuali\MilleWrapperDll\WrapperDll\WrapperDll.vcxproj" (destinazioni: build) NON COMPLETATA.
+
+Compilazione NON RIUSCITA.
+
+Tempo trascorso 00:00:10.32

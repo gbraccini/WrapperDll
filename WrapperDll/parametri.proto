@@ -1,0 +1,74 @@
+//
+// parametri.proto: file di definzione per lo schema protobuf impiegato da wrapperdll
+// Il client per comunicare con il server dovrà utilizzare il message Richiesta. Il server restituirà sempre un messaggio di tipo EseguiFunzione.
+// Se il client voleva eseguire una funzione, inviando quindi una richiesta con settato il messaggio EseguiFunzione, riceverà come risposta un messaggio di tipo
+// EseguiFunzione con settato oltra al parametro di ritorno la lista dei parametri che erano stati passati come puntatori ( quindi parametri che potevano
+// essere di output ).
+// In caso di errore il server restituirà un messaggio di tipo EseguiFunzione settando il campo nome_funzione ad "ERRORE" e il campo handle conterrà il codice 
+// di errore di windows (GetLastError).
+//
+
+package parametri;
+   message RichiestaLoadLibrary   // Messaggio utilizzato quando si deve caricare una dll
+   {
+        required string NomeLibreria = 1;   // Nome della libreria da aprire
+        required string Path = 2;			// Path comprensiva dello slash finale dove andare a cercare la libreria, può essere vuoto questo parametro.
+    }
+
+
+	message Parametro	// Messaggio impiegato per gestire un singolo parametro
+	{
+		enum TipoParametro
+		{
+			 INTERO				= 1;
+			 INTERO_POINTER		= 2;
+			 CONST_CHAR_POINTER	= 3;
+			 CHAR_POINTER		= 4;
+			 BYTE				= 5;
+			 BYTE_POINTER	    = 6;
+			 DOUBLE				= 7;
+			 
+			
+		}
+
+		required  TipoParametro tipo  = 1;
+		optional string stringa		  = 2;
+		optional int32  intero		  = 3; 
+		optional double numero_double = 4;
+    
+	}
+
+ 	message EseguiFunzione // Messaggio impiegato per eseguire una funzione presente nella DLL lato wrapper
+    {
+		required int32     handle         = 1;  // handle della DLL da utilizzare
+	    required string    nome_funzione  = 2;  // Nome della funzione da eseguire
+		repeated Parametro parametri      = 3;  // parametri della funzione da eseguire o contiene i parametri di ritorno che erano stati passati come puntatori.
+		optional Parametro ritorno        = 4;  // parametro di ritorno della funzione deve essere specificato. 
+												// Se non c'è parametro di ritorno può essere omesso
+    }
+    
+    message RichiestaCloseLibrary // Messaggio impiegato per chiudere una libreria precedentemente caricata sul wrapper
+    {
+        required int32 handle = 1;
+    }
+
+message Richiesta  // Messaggio principale utilizzato per colloquiare col wrapper
+ {
+    enum TipoRichiesta {
+        LOADLIBRARY	 = 1;
+        FUNCTION	 = 2;
+        CLOSELIBRARY = 3;
+    }
+
+    required TipoRichiesta tipo = 1;
+	   
+    optional RichiestaLoadLibrary Richiesta_LoadLibrary = 21;
+  
+    optional EseguiFunzione Esegui_Funzione = 22;
+
+    optional RichiestaCloseLibrary Richiesta_Close_Library = 23;
+}
+
+
+
+
