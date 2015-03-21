@@ -7,7 +7,7 @@ E' possibile aprire più DLL contemporaneamente.
 
 Sul canale socket transiteranno quindi le richieste dal client verso il server e ritorneranno i dati dell'elaborazione. Le funzioni verranno TUTTE eseguite sul server che potrà quindi essere su un'altra macchina. 
 
-I client potranno essere scritti in Java o C++, ma anche in python. In sostana in un qualsiasi linguaggio che supporti protobuf.
+I client potranno essere scritti in Java o C++, ma anche in python. In  sostansa in un qualsiasi linguaggio che supporti la libreria protobuf.
 
 Utilizzando questa architettura una macchina Unix potrà eseguire delle funzioni presenti su di una DLL che viene eseguita sul server installato su di una macchina windows.
 
